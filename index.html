@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Management</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>   
+        <h1 class="title">
+        Course Management
+       </h1>
+    </header>
+    <main>
+        <section class="course-container">
+            <div class="course-input">
+                <h2>
+                    Course
+                </h2>
+                <form>
+                    <input type="text" id="course-title" name="course-title" placeholder="Course Title">
+                    <textarea name="course-desc" id="course-desc" placeholder="Course Description" rows="8" cols="50" maxlength=""></textarea>
+                    <input type="number" id="course-duration" placeholder="Duration (hours)" min="0">
+                    <button>Add</button>
+                </form>
+            </div>
+            <div class="divider"></div>
+            <div class="container">
+                <h2>Course List</h2>
+                <div class="course-list">
+                    <div class="course-tables">
+                        <div class="text-container">
+                            <h3>Title</h3>
+                            <p id="description">Description</p>
+                            <p id="duration"><span id="time-val">1</span> Hours</p>
+                        </div>
+                        <div class="icon-container">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="material-container">
+            <div class="material-input">
+                <h2>
+                    Material
+                </h2>
+                <form>
+                    <input type="text" id="material-title" name="material-title" placeholder="Material Title">
+                    <textarea name="material-desc" id="material-desc" placeholder="Material Description" rows="8" cols="50" maxlength=""></textarea>
+                    <input type="text" id="material-link" placeholder="Masukan link nya">
+                    <button>Add</button>
+                </form>
+            </div>
+            <div class="chosen-course">
+                <h2>
+                    Course
+                </h2>
+                <div class="chosen-container">
+                    <h3 id="course-title">Title</h3>
+                    <p id="course-desc">Description</p>
+                    <h5 id="course-duration">Duration</h6>
+                </div>
+            </div>
+            <div class="material-list">
+                <h2>Material list</h2>
+                <div class="material-box">
+                    <div class="material-tables">
+                        <div class="text-container">
+                            <h3 id="material-title">Title</h3>
+                            <p id="material-description">Description</p>
+                            <p id="material-link"><a href="#" target="_blank">Visit material</a></p>
+                        </div>
+                        <div class="icon-container">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <i class="fa-solid fa-trash"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
