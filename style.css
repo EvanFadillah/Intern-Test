@@ -211,10 +211,13 @@ form button:hover {
 .material-list {
     width: 85%;
     margin-left: 6.1rem;
-    overflow-y: auto;
     h2 {
         margin-left: .5rem;
     }
+}
+
+.material-box {
+    overflow-y: auto;
 }
 
 .material-tables {
@@ -255,8 +258,9 @@ form button:hover {
 
 
 /* Ukuran tablets dan small devices (width up to 1024px) */
+/* Ukuran tablets dan small devices (width up to 1024px) */
 @media only screen and (max-width: 1024px) {
-    .course-container {
+    .course-container, .material-container {
         flex-direction: column;
         align-items: center;
         padding: 1rem;
@@ -268,17 +272,17 @@ form button:hover {
         display: none;
     }
 
-    .course-input, .container {
+    .course-input, .container, .material-input, .chosen-course, .material-list {
         width: 100%;
         margin-bottom: 1rem;
     }
 
-    .course-list {
+    .course-list, .material-box {
         width: 100%;
         padding: 0;
     }
 
-    .course-tables {
+    .course-tables, .material-tables {
         width: 100%;
     }
 }
@@ -294,16 +298,16 @@ form button:hover {
         font-size: 1.5rem;
     }
 
-    .course-input, .container {
+    .course-input, .container, .material-input, .chosen-course {
         width: 90%;
     }
 
-    .course-list {
+    .course-list, .material-box {
         height: auto;
         max-height: 200px;
     }
 
-    .course-tables {
+    .course-tables, .material-tables {
         flex-direction: column;
     }
 
@@ -319,6 +323,12 @@ form button:hover {
     .icon-container i {
         margin-bottom: 0;
     }
+
+    .material-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+    }
 }
 
 /* Ukuran Mobile Device (width up to 480px) */
@@ -332,24 +342,20 @@ form button:hover {
         padding: 0.5rem;
     }
 
-    .course-input {
+    .course-input, .material-input {
         padding: 1rem 0.5rem;
     }
 
-    .container {
+    .container, .chosen-course, .material-list {
         padding: 0 0.5rem;
     }
 
-    .course-list {
-        width: 100%;
-    }
-
-    .course-tables {
+    .course-tables, .material-tables {
         flex-direction: column;
         padding: 0.5rem;
     }
 
-    .text-container {
+    .text-container, .icon-container {
         width: 100%;
     }
 
@@ -361,5 +367,28 @@ form button:hover {
 
     .icon-container i {
         margin: 0 0.5rem;
+    }
+}
+
+/* Tambahan untuk perangkat dengan layar yang sangat kecil */
+@media only screen and (max-width: 360px) {
+    h1.title {
+        font-size: 1rem;
+    }
+
+    .course-input, .material-input {
+        padding: 0.5rem;
+    }
+
+    form input, form textarea, form button {
+        padding: 0.3rem;
+    }
+
+    .text-container {
+        font-size: 0.8rem;
+    }
+
+    .icon-container i {
+        font-size: 1rem;
     }
 }
